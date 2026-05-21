@@ -13,7 +13,7 @@ require_once "../classes/Fornecedor.php";
 $produto = new Produto();
 $fornecedor = new Fornecedor();
 
-// cadastro
+/* cadastro
 if (isset($_POST['cadastrar'])) {
     $produto->cadastrar(
         $_POST['nome'],
@@ -24,7 +24,7 @@ if (isset($_POST['cadastrar'])) {
 
     header("Location: produtos.php");
     exit;
-}
+} */
 
 // edição 
 if (isset($_POST['editar'])) {
@@ -79,7 +79,7 @@ $fornecedores = $fornecedor->listar();
     <!-- lista de produtos -->
     <div class="card shadow mb-4">
         <div class="card-body">
-            <form method="POST">
+            <form id="formProduto">
                 <div class="row g-2">
                     <div class="col-md-3">
                         <input

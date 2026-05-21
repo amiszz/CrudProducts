@@ -106,7 +106,6 @@ $fornecedores = $fornecedor->listar();
                     <div class="col-md-1">
                         <button
                             type="submit"
-                            name="cadastrar"
                             class="btn btn-primary w-100"
                         >
                             Incluir
@@ -235,5 +234,26 @@ $fornecedores = $fornecedor->listar();
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+    $("#formFornecedor").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url: "../ajax/fornecedor.php",
+            method: "POST",
+            data: {
+                acao: "cadastrar",
+                nome: $("input[name='nome']").val(),
+                email: $("input[name='email']").val(),
+                telefone: $("input[name='telefone']").val()
+            },
+            success: function(response){
+                alert("Fornecedor cadastrado com sucesso!");
+                location.reload();
+            }
+        });
+    });
+</script>
 </body>
 </html>
