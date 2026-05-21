@@ -42,6 +42,10 @@ crud_produtos/
 - **Bootstrap 5** - Layout e componentes visuais
 - **JavaScript** - Interatividade
 
+## Protótipagem Figma
+
+https://www.figma.com/design/MSixybON9tzaY0B1Yzwf0a/Untitled?node-id=0-1&t=bbPskj1NSg4Gmt1n-1
+
 ## Finalidade Acadêmica
 
 Trabalho prático desenvolvido para fins de aprendizado em desenvolvimento Web e integração com banco de dados em tempo real.
