@@ -133,7 +133,6 @@ $fornecedores = $fornecedor->listar();
                     <div class="col-md-1">
                         <button
                             type="submit"
-                            name="cadastrar"
                             class="btn btn-primary w-100"
                         >
                             Incluir
@@ -284,5 +283,27 @@ $fornecedores = $fornecedor->listar();
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+    $("#formProduto").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url: "../ajax/produtos.php",
+            method: "POST",
+            data: {
+                acao: "cadastrar",
+                nome: $("input[name='nome']").val(),
+                descricao: $("input[name='descricao']").val(),
+                preco: $("input[name='preco']").val(),
+                fornecedor_id: $("select[name='fornecedor_id']").val()
+            },
+            success: function(response){
+                alert("Produto cadastrado com sucesso!");
+                location.reload();
+            }
+        });
+    });
+</script>
 </body>
 </html>
