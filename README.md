@@ -45,5 +45,5 @@ crud_produtos/
 ## Finalidade Acadêmica
 
 Trabalho prático desenvolvido para fins de aprendizado em desenvolvimento Web e integração com banco de dados em tempo real.
-
-
+ 
+ ---
